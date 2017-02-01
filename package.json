@@ -1,0 +1,21 @@
+{
+  "name": "apt-hunt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docker": "node index.js"
+  },
+  "author": "chase starr",
+  "license": "ISC",
+  "dependencies": {
+    "@slack/client": "^3.8.1",
+    "dotenv": "^4.0.0",
+    "mongoose": "^4.8.1",
+    "node-craigslist": "^1.1.0"
+  },
+  "devDependencies": {
+    "standard": "^8.6.0"
+  }
+}
