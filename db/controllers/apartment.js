@@ -1,11 +1,20 @@
-const User = require('../models/apartment.js')
+const Apt = require('../models/apartment.js')
 
-const findOne = (pid, callback) => {
-  User.findOne({pid: pid}, callback)
+function findOneById (pid, callback) {
+  Apt.findOne({pid: pid}, callback)
 }
 
-const insertOne = (pid, callback) => {
-  User.create({pid: pid}, callback)
+function findOneByTitle (title, callback) {
+  Apt.findOne({title: title}, callback)
 }
 
-module.exports = {findOne, insertOne}
+const insertOne = (result, callback) => {
+  const doc = {
+    pid: result.pid,
+    title: result.title
+  }
+
+  Apt.create(doc, callback)
+}
+
+module.exports = {findOneById, findOneByTitle, insertOne}
